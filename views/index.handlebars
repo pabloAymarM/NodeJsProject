@@ -1,0 +1,27 @@
+<section>
+    <section class="my-4 text-center">
+        <h1>Produtos LTDA</h1>
+    </section>
+
+    <div class="container-fluid mb-4 row row-cols-1 row-cols-md-3 g-4">
+        {{#each dados}} <!--Cada dado, mutiplicando a quantidade de produtos-->
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{dataValues.nome}}</h5>
+                    <p class="card-text m-0">Quantidade: {{dataValues.quantidade}}</p>
+                    <p class="card-text m-0">Preço: {{dataValues.preco}}</p>
+                </div>
+
+                <div class="card-footer text-body-secondary">
+                    <a href="/excluir/{{dataValues.id}}" class="btn btn-danger">Excluir produto</a>
+                </div>
+            </div>
+        </div>
+
+        {{else}}
+        <p>Nenhum produto cadastrado ainda.</p> 
+
+        {{/each}}
+    </div>
+</section>

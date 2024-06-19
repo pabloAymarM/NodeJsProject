@@ -1,0 +1,10 @@
+npm init
+
+npm install express --save
+
+npm install express-handlebars --save
+
+npm install sequelize sqlite3
+
+nodemon -v
+
